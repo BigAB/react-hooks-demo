@@ -1,0 +1,127 @@
+body {
+  padding: 0;
+  margin: 0;
+}
+
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.App > h1 {
+  margin-bottom: 3em;
+}
+
+.toggle-body {
+  display: inline-flex;
+  border-radius: 150px;
+  background-color: #e6e6e6;
+  border: 1px solid #e6e6e6;
+  width: 300px;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+}
+
+.toggle-circle {
+  height: 150px;
+  width: 150px;
+  border-radius: 150px;
+  background-color: white;
+  position: relative;
+  left: 0;
+  transition: left 0.2s ease-in-out;
+}
+
+input.toggle-checkbox[type='checkbox'] {
+  display: none;
+}
+input.toggle-checkbox[type='checkbox']:checked ~ .toggle-body {
+  background-color: #0070c9;
+  border-color: #0070c9;
+}
+input.toggle-checkbox[type='checkbox']:checked ~ .toggle-body .toggle-circle {
+  left: 148px;
+}
+
+.label {
+  color: #666;
+  font-size: 130px;
+  display: inline-flex;
+  align-items: center;
+  font-weight: 500;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.countdown {
+  margin-top: 3em;
+}
+
+.countdown label {
+  display: block;
+  font-size: 5em;
+  opacity: 0.2;
+}
+.countdown label.running {
+  opacity: 1;
+}
+
+.countdown button {
+  border: 1px solid #ccc;
+  background: #fff;
+  font-size: 2em;
+  padding: 0.5em;
+  margin: 1em;
+  width: 200px;
+}
+
+.user-card {
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  margin: auto;
+  text-align: center;
+  font-family: arial;
+}
+
+.user-card > img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.user-card > .title {
+  color: grey;
+  font-size: 18px;
+}
+
+.debounce {
+  font-size: 2em;
+}
+
+.debounce input {
+  font-size: 1em;
+  margin-bottom: 3em;
+}
+
+.output {
+  font-weight: bold;
+  color: rebeccapurple;
+  animation-duration: 0.4s;
+  animation-name: slidein;
+  min-height: 1.2em;
+}
+
+@keyframes slidein {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(2);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
